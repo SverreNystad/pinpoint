@@ -71,7 +71,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - run: mkdocs gh-deploy --force
+      - run: uv run mkdocs gh-deploy --force
 
   dependabot:
     name: 'Dependabot'
