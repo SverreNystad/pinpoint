@@ -1,6 +1,6 @@
-# Pinpoint 
+# Pinpoint
 
-This system takes in images and predicts where in the world you are 
+This system takes in images and predicts where in the world you are
 
 ## 🛠️ Prerequisites
 
@@ -10,6 +10,18 @@ This system takes in images and predicts where in the world you are
 - **Docker** (optional): For DevContainer development. [Download Docker](https://www.docker.com/products/docker-desktop)
 
 ## Usage
+
+To run the application, you can use the following command:
+
+```bash
+docker compose up --build
+```
+
+To get the latest data, you can run:
+
+```bash
+./fetch_data.bash
+```
 
 ## 📖 Generate Documentation Site
 

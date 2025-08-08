@@ -1,4 +1,4 @@
-site_name: Cogito Norwegian AI Championship 2025
+site_name: Pinpoint
 
 theme:
   name: material
@@ -53,12 +53,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Team: previous-experiences.md
-  - Data:
-      - Data Guild: data.md
-      - Data External Sources: data-sources.md
-  - API Reference: reference/
-
+      
 plugins:
   - search
   - awesome-nav
