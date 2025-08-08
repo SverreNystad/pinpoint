@@ -42,6 +42,19 @@ jobs:
         run: |
             uv run pytest --doctest-modules --cov=src --cov-report=html
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - run: mkdocs gh-deploy --force
+
   dependabot:
     name: 'Dependabot'
     needs: [build-and-test] 
